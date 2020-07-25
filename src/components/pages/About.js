@@ -2,10 +2,11 @@ import React from "react";
 import profileImage from "../../assets/images/bipin.JPG"
 
 
+
 function About() {
     return (
         <>
-        <div className="container inside-container shadow bg-white rounded">
+        
             <div className="row">
                 <div className="col-lg-12">
                     <div className="card mb-3 border-0">
@@ -19,7 +20,7 @@ function About() {
             <div className="row">
                 <div className="col-lg-12">
                     <div className="image">
-                        <img src={profileImage} alt="profile picture" />
+                        <img src={profileImage} alt="profile" />
                     </div>
                     {/*--end of image*/}
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada augue vel elit ornare
@@ -50,7 +51,7 @@ function About() {
                 </div>
             </div>
             {/*end third paragraph*/}
-        </div>{/*end of inside container*/ }
+        
         </>
   );
 }

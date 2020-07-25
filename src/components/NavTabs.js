@@ -1,19 +1,20 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Pdf from "../assets/Resume.pdf"
+import InsideContainer from "./InsideContainer";
 
 function NavTabs() {
 
     const location = useLocation();
 
     return (
-
-        <div class="row m-0">
-            <div class="col-lg-12 bg-header">
+        <>
+        <div className="row m-0">
+            <div className="col-lg-12 bg-header">
                 <nav className="navbar navbar-expand-lg navbar-light">
-                    <Link className="navbar-brand" href="#">
+                    <div className="navbar-brand" href="#">
                         <h1>Bipin Maharjan</h1>
-                    </Link>
+                    </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -61,8 +62,11 @@ function NavTabs() {
                         </ul> {/*end of links on nav bar links */}
                     </div>{/*end of collapsible nav-bar */}
                 </nav>{/*end of navbar */}
+                
             </div>
         </div>
+        < InsideContainer />
+        </>
 
     );
 }
