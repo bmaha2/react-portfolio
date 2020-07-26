@@ -20,7 +20,7 @@ function NavTabs() {
                     </button>
                     {/*button when the nav-bar collapses */}
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ml-auto">
+                        <ul className="navbar-nav ml-auto ">
                             <li className="nav-item">
                                 <a className="btn btn-block btn-social btn-github" href={"https:github.com/bmaha2"} target="_blank" rel="noopener noreferrer">
                                     <span className="fa fa-github"></span> Github
@@ -62,7 +62,6 @@ function NavTabs() {
                         </ul> {/*end of links on nav bar links */}
                     </div>{/*end of collapsible nav-bar */}
                 </nav>{/*end of navbar */}
-                
             </div>
         </div>
         < InsideContainer />

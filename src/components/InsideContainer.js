@@ -8,13 +8,13 @@ import Footer from "./Footer"
 function InsideContainer() {
     return (
         <>
-        <div className="container inside-container shadow bg-white rounded">
-            <Route exact path="/" component={About} />
-        <Route exact path="/About" component={About} />
-        <Route exact path="/Portfolio" component={Portfolio} />
-        <Route exact path="/contact" component={Contact} />
-        </div>
-        <Footer />
+            <div className="container inside-container shadow bg-white rounded">
+                <Route exact path="/" component={About} />
+                <Route exact path="/About" component={About} />
+                <Route exact path="/Portfolio" component={Portfolio} />
+                <Route exact path="/contact" component={Contact} />
+            </div>
+            <Footer />
         </>
 
     )

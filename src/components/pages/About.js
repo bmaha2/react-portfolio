@@ -6,7 +6,6 @@ import profileImage from "../../assets/images/bipin.JPG"
 function About() {
     return (
         <>
-        
             <div className="row">
                 <div className="col-lg-12">
                     <div className="card mb-3 border-0">
@@ -51,9 +50,8 @@ function About() {
                 </div>
             </div>
             {/*end third paragraph*/}
-        
         </>
-  );
+    );
 }
 
 export default About;
