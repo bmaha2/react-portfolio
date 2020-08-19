@@ -22,7 +22,7 @@ function NavTabs() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto ">
                             <li className="nav-item">
-                                <a className="btn btn-block btn-social btn-github" href={"https:github.com/bmaha2"} target="_blank" rel="noopener noreferrer">
+                                <a className="btn btn-block btn-social btn-github" href={"https://github.com/bmaha2"} target="_blank" rel="noopener noreferrer">
                                     <span className="fa fa-github"></span> Github
                                     </a>
                             </li>
