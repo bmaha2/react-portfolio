@@ -5,71 +5,18 @@ body {
 	background-color: #e3e7eb;
 	
 }
-/*-------------------------main container----------------------*/
-.container {
-	margin-top: 40px;
-	}
-/*---------------------background pattern--------------------*/
-.bg-pattern {
-	width: 100%;
-    background-image: url("../assets/images/redox_02.png");
-    background-size: cover;
-	background-position: center;
-	
-}
-.bg-header {	
-	background-color:#f0f6fa;	
-}
 /*---------------------navbar and heading headers---------------*/
-h1, h2, h5 {
+
+h2{
 	font-weight: bolder;
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	margin-bottom: 0;
-}
-h1 {
-	color:#128b60 ;
-}
- h5 {
-	background-color: #128b60;
-	color:#fff;
-}
-h2{
 	color:#128b60;
+	margin-bottom: 0;
 	margin-left: -16px;	
 }
-.navbar {
-	padding: 0;
-}
-.navbar-nav, .nav-item, .nav-link {
-	font-family: Arial, 'Helvetica Neue' , Helvetica, sans-serif;
-}
-.navbar-brand {
-	margin-bottom:0;
-	margin-left: 20px;
-	padding: 0;
-}
-.nav-link{
-	font-size: 20px;
-}
-.first-link,.second-link {
-	border-right: 1px solid #666666;	
-	line-height: 10px;
-}
-.third-link {
-	line-height: 10px;
-}
-a {
-	text-align: left !important;
-	padding: 8px 8px !important;	
-}
 
-/*------------------------inside container---------------------*/
-.inside-container {
-	width: 80%;	
-	background-color: #fff;	
-	margin-left:  20px auto;
-	
-}
+
+
 p {
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	line-height: 1.5;		
@@ -84,61 +31,4 @@ p {
 .image {
 	float: left;
 	margin-right: 10px;	
-}
-/*----------------------Contact-----------------------------*/
-.submit-btn {
-	background-color: #128b60;
-	padding: 10px 25px 10px 25px;
-	color: #fff;
-}
-.form-group {
-	font-family: Arial, 'Helvetica Neue' , Helvetica, sans-serif;
-}
-/*-----------------------Portfolio-------------------------*/
-.card-header {
-	background-color: #f0f6fa !important;
-}
-h5 {
-	width: 100%;	
-	margin-left: -20px;
-	text-align: center;		
-}
-img {
-	position: relative;
-}
-.card-link {
-	margin-left: 0 !important;
-}
-.card-body {
-	padding: 0;
-	margin-left: 20px;
-}
-.submit {
-	padding-bottom: 5px;
-}
-/*------------------------footer------------------------------*/
-.card-footer {
-	display: flex;
-	list-style: none;
-	flex-flow: row wrap;
-	border-top: 8px solid #128b60;
-	background-color: #666666;
-	color: #fff;
-	justify-content: space-around;
-	font-size:medium;
-	font-family: Arial, 'Helvetica Neue' , Helvetica, sans-serif;
-	width: 100%;
-	margin-top: 40px;
-}
-.card-footer #mail a {
-	color: #fff;
-}
-.card-footer #phone span {
-	margin: 5px;
-}
-h5 a {
-	color:#fff;
-}
-li a span {
-	font-size: 20px;
 }

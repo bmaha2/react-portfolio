@@ -2,7 +2,6 @@ import React from "react";
 import profileImage from "../../assets/images/bipin.JPG"
 
 
-
 function About() {
     return (
         <>
