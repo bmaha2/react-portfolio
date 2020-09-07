@@ -1,73 +1,106 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import Pdf from "../assets/Resume.pdf"
-import InsideContainer from "./InsideContainer";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Box from "@material-ui/core/Box";
+import { Route } from "react-router-dom";
+import HomeIcon from "@material-ui/icons/Home";
+import WorkIcon from "@material-ui/icons/Work";
+import PersonPinIcon from "@material-ui/icons/PersonPin";
 
-function NavTabs() {
+import Background from "../assets/images/WEB-DEVELOPMENT.jpg";
 
-    const location = useLocation();
+import About from "../components/pages/About";
+import Portfolio from "../components/pages/Portfolio";
 
-    return (
-        <>
-        <div className="row m-0">
-            <div className="col-lg-12 bg-header">
-                <nav className="navbar navbar-expand-lg navbar-light">
-                    <div className="navbar-brand" href="#">
-                        <h1>Bipin Maharjan</h1>
-                    </div>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    {/*button when the nav-bar collapses */}
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ml-auto ">
-                            <li className="nav-item">
-                                <a className="btn btn-block btn-social btn-github" href={"https://github.com/bmaha2"} target="_blank" rel="noopener noreferrer">
-                                    <span className="fa fa-github"></span> Github
-                                    </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="btn btn-block btn-social btn-linkedin"
-                                    href={"https://www.linkedin.com/in/bipin-maharjan-82819538/"} target="_blank" rel="noopener noreferrer">
-                                    <span className="fa fa-linkedin"></span> LinkedIn
-                                    </a>
-                            </li>
+import Footer from "./Footer";
 
-                            <li className="nav-item">
-                                <a className="btn btn-block btn-social btn-resume" href={Pdf} target="_blank" rel="noopener noreferrer"><span className="fa fa-user-plus"></span>Resume</a>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link
-                                    to="/About"
-                                    className={location.pathname === "About/" ? "nav-link active" : "nav-link"}
-                                ><span className="fa fa-home"></span> About
-                                    </Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link
-                                    to="/contact"
-                                    className={location.pathname === "/contact" ? "nav-link active" : "nav-link"}
-                                ><span className="fa fa-user-plus"></span> Contact
-                                    </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link
-                                    to="/portfolio"
-                                    className={location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
-                                ><span className="fa fa-briefcase"></span> Portfolio
-                                  </Link>
-                            </li>
-                        </ul> {/*end of links on nav bar links */}
-                    </div>{/*end of collapsible nav-bar */}
-                </nav>{/*end of navbar */}
-            </div>
-        </div>
-        < InsideContainer />
-        </>
-
-    );
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`nav-tabpanel-${index}`}
+      aria-labelledby={`nav-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Route>{children}</Route>
+        </Box>
+      )}
+    </div>
+  );
 }
 
-export default NavTabs;
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `nav-tab-${index}`,
+    "aria-controls": `nav-tabpanel-${index}`,
+  };
+}
+
+function LinkTab(props) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event) => {
+        event.preventDefault();
+      }}
+      {...props}
+    />
+  );
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+    backgroundImage: "url(" + Background + ")",
+  },
+}));
+
+export default function NavTabs(props) {
+  const { selectionFollowsFocus } = props;
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <div className={classes.root}>
+      <AppBar position="sticky">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="nav tabs example"
+          centered
+          selectionFollowsFocus={selectionFollowsFocus}
+        >
+          <LinkTab label="Home" icon={<HomeIcon />} {...a11yProps(0)} />
+          <LinkTab label="portfolio" icon={<WorkIcon />} {...a11yProps(1)} />
+          <LinkTab label="Contact" icon={<PersonPinIcon />} {...a11yProps(2)} />
+        </Tabs>
+      </AppBar>
+      <TabPanel value={value} index={0}>
+        <Route component={About} />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Route component={Portfolio} />
+      </TabPanel>
+
+      <Footer />
+    </div>
+  );
+}
