@@ -6,7 +6,7 @@ import weather_pic from "../../assets/images/weather-app.png";
 import workday_pic from "../../assets/images/work-day.PNG";
 import election_pic from "../../assets/images/election.PNG";
 import pandemic_pic from "../../assets/images/pandemic-pantry.PNG";
-import aqir_pic from "../../assets/images/aqir.PNG";
+import aqir_pic from "../../assets/images/aqir.png";
 import employeeDir_pic from "../../assets/images/employee-directory.PNG"
 import MediaCard from "../MediaCard";
 
