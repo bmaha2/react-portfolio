@@ -12,10 +12,11 @@ import PersonPinIcon from "@material-ui/icons/PersonPin";
 
 import Background from "../assets/images/WEB-DEVELOPMENT.jpg";
 
-import About from "../components/pages/About";
-import Portfolio from "../components/pages/Portfolio";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
 
 import Footer from "./Footer";
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -99,6 +100,7 @@ export default function NavTabs(props) {
       <TabPanel value={value} index={1}>
         <Route component={Portfolio} />
       </TabPanel>
+      
 
       <Footer />
     </div>

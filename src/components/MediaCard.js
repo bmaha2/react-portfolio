@@ -7,6 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import LinkIcon from "@material-ui/icons/Link";
+import VisibilityIcon from "@material-ui/icons/Visibility";
 
 export default function MediaCard(props) {
   return (
@@ -31,26 +32,27 @@ export default function MediaCard(props) {
         <Button
           variant="contained"
           color="primary"
-          endIcon={<LinkIcon />}
           fullWidth={true}
           size="small"
           href={`https://github.com/${props.github}`}
           target="_blank"
           rel="noopener noreferrer"
         >
+          <LinkIcon size="medium" />
           gitHub
         </Button>
         <Button
           variant="contained"
           color="primary"
-          endIcon={<LinkIcon />}
           fullWidth={true}
           size="small"
           href={props.deployed}
           target="_blank"
           rel="noopener noreferrer"
         >
-         Deployed
+          {" "}
+          <VisibilityIcon size="medium" />
+          Live
         </Button>
       </CardActions>
     </Card>
