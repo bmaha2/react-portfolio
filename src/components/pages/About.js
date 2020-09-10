@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   span: {
     fontFamily: 'Dancing Script',
-    fontSize: '32px'
+    fontSize: '26px'
   }
 }));
 
@@ -43,7 +43,7 @@ export default function About() {
       <Box m={2}>
         <Typography component="h6" variant="h6">
           Hi! I am <span className = {classes.span}>Bipin Maharjan</span>, recently graduated from UW coding bootcamp
-          with full-stack certificate. I've a background in Electrical
+          as a <span className = {classes.span}>Full Stack Web Developer</span>. I've a background in Electrical
           Engineering and retail management. Checkout my work in Portfolio
           section.
         </Typography>
