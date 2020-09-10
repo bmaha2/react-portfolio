@@ -1,9 +1,9 @@
-import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import React from "react";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 import NavTabs from "../components/NavTabs";
-
+import Footer from "../components/Footer";
 
 export default function Wrapper() {
   return (
@@ -11,8 +11,12 @@ export default function Wrapper() {
       <CssBaseline />
       <Container maxWidth="lg">
         <NavTabs>
-        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
+          <Typography
+            component="div"
+            style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
+          />
         </NavTabs>
+        <Footer />
       </Container>
     </React.Fragment>
   );

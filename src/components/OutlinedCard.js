@@ -7,11 +7,11 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import CheckIcon from "@material-ui/icons/CheckCircleOutlineRounded";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    flexWrap: "wrap",
   },
   paper: {
     padding: theme.spacing(3),
@@ -51,8 +51,7 @@ export default function OutlinedCard() {
                     boxShadow={8}
                     borderRadius={4}
                   >
-                    <StarBorderIcon fontSize="small" /> About Me{" "}
-                    <StarBorderIcon fontSize="small" />
+                    About Me
                   </Box>
                 </Typography>
                 <Typography component="h6">
@@ -66,7 +65,7 @@ export default function OutlinedCard() {
           </Paper>
         </Grid>
         <Grid item sm={6} container justify="center">
-          <Paper className={classes.paper} elevation={3}>
+          <Paper className={classes.paper}>
             <Card className={classes.card} variant="outlined">
               <CardContent>
                 <Typography variant="h5" component="h2">
@@ -80,8 +79,7 @@ export default function OutlinedCard() {
                     borderRadius={6}
                     lineHeight="normal"
                   >
-                    <StarBorderIcon fontSize="small" /> Technologies{" "}
-                    <StarBorderIcon fontSize="small" />
+                    Technologies{" "}
                   </Box>
                 </Typography>
                 <Typography variant="h5">
