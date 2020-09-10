@@ -9,7 +9,7 @@ import { Route } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import WorkIcon from "@material-ui/icons/Work";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
-
+// eslint-disable-next-line
 import Background from "../assets/images/WEB-DEVELOPMENT.jpg";
 
 import About from "./pages/About";
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    backgroundImage: "url(" + Background + ")",
+    // backgroundImage: "url(" + Background + ")",
   },
 }));
 
