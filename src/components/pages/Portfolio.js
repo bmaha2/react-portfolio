@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Button from "@material-ui/core/Button";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
@@ -9,65 +8,9 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import LinkIcon from "@material-ui/icons/Link";
 import VisibilityIcon from "@material-ui/icons/Visibility";
-
-import weather_pic from "../../assets/images/weather-app.png";
-import workday_pic from "../../assets/images/work-day.PNG";
-import election_pic from "../../assets/images/election.PNG";
-import pandemic_pic from "../../assets/images/pandemic-pantry.PNG";
-import aqir_pic from "../../assets/images/aqir.png";
-import employeeDir_pic from "../../assets/images/employee-directory.PNG";
-import CustomizedDialogs from "../CustomizedDialogs";
-
-const data = [
-  {
-    pic: weather_pic,
-    title: "5-Day forecast",
-    description:
-      "Search the city to view current forecast in the dashboard as well as 5 day forecast",
-    github: "bmaha2/weather-app.git",
-    deployed: "https://bmaha2.github.io/weather-app/",
-  },
-  {
-    pic: workday_pic,
-    title: "Work Day Scheduler",
-    description:
-      "Schedule your workday with hour colored blocked to indicate present, past or future",
-    github: "bmaha2/WorkDayScheduler.git",
-    deployed: "https://bmaha2.github.io/WorkDayScheduler/",
-  },
-  {
-    pic: employeeDir_pic,
-    title: "Employee Directory",
-    description:
-      "Employee directory with search functionality by name of the employee",
-    github: "bmaha2/Employee-Directory.git",
-    deployed: "https://sad-payne-831947.netlify.app/",
-  },
-  {
-    pic: pandemic_pic,
-    title: "Pandemic Pantry",
-    description:
-      "Group Proj#1 Search for the recipe with any item, tolerences can be set as well",
-    github: "jeffreyadamo/GroupProject1-PandemicPantry.git",
-    deployed: "https://jeffreyadamo.github.io/GroupProject1-PandemicPantry/",
-  },
-  {
-    pic: aqir_pic,
-    title: "Aqir",
-    description:
-      "Group Proj#2 e-comm site with user authentication to post items",
-    github: "ngoudeau2012/project_aqir.git",
-    deployed: "https://thawing-castle-93200.herokuapp.com/",
-  },
-  {
-    pic: election_pic,
-    title: "Represent-Me",
-    description:
-      "Group Proj#3 app to find information on their local government",
-    github: "gidmp/Represent-Me.git",
-    deployed: "https://represent-me-2020.herokuapp.com/",
-  },
-];
+import Box from "@material-ui/core/Box";
+import data from "../../assets/data";
+import Modal from "../Modal";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -110,7 +53,7 @@ function Portfolio() {
   };
 
   return (
-    <Box mx="auto" boxShadow={3} className={classes.root}>
+    <Box mx="auto" boxShadow={10} className={classes.root}>
       <Paper square className={classes.header}>
         <Typography variant="h5" component="h2">
           {data[activeStep].title}
@@ -148,7 +91,7 @@ function Portfolio() {
           Live
         </Button>
 
-        <CustomizedDialogs
+        <Modal
           description={data[activeStep].description}
           title={data[activeStep].title}
         />

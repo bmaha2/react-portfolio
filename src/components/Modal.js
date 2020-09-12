@@ -52,7 +52,7 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-export default function CustomizedDialogs(props) {
+export default function Modal(props) {
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);

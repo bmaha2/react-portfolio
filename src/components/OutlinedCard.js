@@ -161,17 +161,24 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     fontSize: "16px",
     backgroundColor: "rgb(253 243 213)",
+    border: "2px solid #b5803f",
+    boxShadow: "1px 3px #888888",
   },
 }));
 
 export default function OutlinedCard() {
   const classes = useStyles();
+  // eslint-disable-next-line
   const [chipData, setChipData] = React.useState([
     { key: 0, label: "HTML" },
     { key: 1, label: "CSS" },
     { key: 2, label: "JavaScript" },
-    { key: 3, label: "MERN Stack" },
-    { key: 4, label: "git" },
+    { key: 3, label: "MongoDB" },
+    { key: 4, label: "Express" },
+    { key: 5, label: "React"},
+    { key: 6, label: "Node" },
+    { key: 7, label: "MySql" },
+    { key: 8, label: "git" },
   ]);
 
   return (

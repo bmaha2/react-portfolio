@@ -14,6 +14,7 @@ import Background from "../assets/images/WEB-DEVELOPMENT.jpg";
 
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -24,9 +25,12 @@ function TabPanel(props) {
       id={`nav-tabpanel-${index}`}
       aria-labelledby={`nav-tab-${index}`}
       {...other}
+      
+      
+     
     >
       {value === index && (
-        <Box p={3}>
+        <Box p={5}>
           <Route>{children}</Route>
         </Box>
       )}
@@ -62,9 +66,10 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    
     // backgroundImage: "url(" + Background + ")",
   },
+  
 }));
 
 export default function NavTabs(props) {
@@ -78,7 +83,7 @@ export default function NavTabs(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="sticky">
+      <AppBar position="sticky" >
         <Tabs
           value={value}
           onChange={handleChange}
@@ -96,6 +101,9 @@ export default function NavTabs(props) {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Route component={Portfolio} />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Route component={Contact} />
       </TabPanel>
     </div>
   );
