@@ -86,7 +86,12 @@ export default function Modal(props) {
         </DialogTitle>
 
         <DialogContent dividers>
-          <Typography gutterBottom>{props.description}</Typography>
+        <li key={props.key}>
+          {props.description1}
+        </li>
+        <li key={props.key}>
+          {props.description2}
+        </li>
         </DialogContent>
       </Dialog>
     </>

@@ -9,12 +9,10 @@ import { Route } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import WorkIcon from "@material-ui/icons/Work";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
-// eslint-disable-next-line
-import Background from "../assets/images/WEB-DEVELOPMENT.jpg";
 
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -25,9 +23,6 @@ function TabPanel(props) {
       id={`nav-tabpanel-${index}`}
       aria-labelledby={`nav-tab-${index}`}
       {...other}
-      
-      
-     
     >
       {value === index && (
         <Box p={5}>
@@ -66,10 +61,7 @@ function LinkTab(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    
-    // backgroundImage: "url(" + Background + ")",
   },
-  
 }));
 
 export default function NavTabs(props) {
@@ -83,7 +75,7 @@ export default function NavTabs(props) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="sticky" >
+      <AppBar position="sticky">
         <Tabs
           value={value}
           onChange={handleChange}

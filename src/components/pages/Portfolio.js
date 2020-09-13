@@ -88,11 +88,12 @@ function Portfolio() {
         >
           {" "}
           <VisibilityIcon size="medium" />
-          Live
+          DEMO
         </Button>
 
         <Modal
-          description={data[activeStep].description}
+          description1={data[activeStep].description1}
+          description2={data[activeStep].description2}
           title={data[activeStep].title}
         />
       </Paper>

@@ -57,9 +57,9 @@ export default function About() {
       </Box>
       <Box m={2}>
         <Typography component="h6" variant="h6">
-          Hi, I am <span className = {classes.span}>Bipin Maharjan</span>, recently graduated from UW coding bootcamp
-          as a <span className = {classes.span}>Full Stack Web Developer</span>. I've a background in Electrical
-          Engineering and retail management. Checkout my work in Portfolio
+          Hi, I am <span className = {classes.span}>Bipin Maharjan</span>, recently graduated from the Univeristy of Washington Coding Boot Camp
+          as a <span className = {classes.span}>Full Stack Web Developer</span>. I've a background in electrical
+          engineering and retail management. Checkout my work in Portfolio
           section.
         </Typography>
       </Box>
